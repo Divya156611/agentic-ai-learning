@@ -1,0 +1,28 @@
+[project]
+name = "langchainupdated"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Divya Bisht" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "langchain-google-genai>=4.4.2",
+    "pandas>=3.1.0",
+]
+
+[project.scripts]
+langchainupdated = "langchainupdated:main"
+
+[build-system]
+requires = ["uv_build>=0.13.5,<0.14.0"]
+build-backend = "uv_build"
+
+[tool.uv.workspace]
+members = [
+    "LangchainUpdated",
+    "langgraph",
+    "MCP",
+    "RAG",
+]
